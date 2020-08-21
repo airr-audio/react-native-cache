@@ -33,6 +33,6 @@
         "typescript": "^3.8.3"
     },
     "dependencies": {
-        "@react-native-community/async-storage": "^1.8.1"
+        "@react-native-community/async-storage": "^1.12.0"
     }
 }
