@@ -104,7 +104,7 @@ export default class Cache {
         if (entry) {
             value = entry.value;
             if (this.policy.ttl && this.policy.ttl > 0) {
-              const deadline = entry.created.getTime() + this.policy.ttl * 1000;
+              const deadline = new Date(entry.created).getTime() + this.policy.ttl * 1000;
               const now = (new Date()).getTime();
               if (deadline < now) {
                 this.remove(key);
